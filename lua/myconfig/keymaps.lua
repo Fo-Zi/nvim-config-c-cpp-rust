@@ -21,4 +21,4 @@ vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = tru
 
 -- Terminal shortcut
 -- <Space> + t -> Opens terminal in the bottom
-vim.api.nvim_set_keymap('n', '<Leader>t', ':belowright 30 split | terminal<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>t', ':belowright 20 split | terminal<CR>', { noremap = true, silent = true })
