@@ -1,0 +1,9 @@
+require('nvim-autopairs').setup({
+  check_ts = true,  -- Use treesitter for more accurate pair detection
+  map_cr = true,    -- Map <CR> to auto-complete pairs
+  map_bs = true,    -- Map backspace to remove pairs
+})
+
+-- Optional: Custom mapping for backspace inside pairs
+vim.api.nvim_set_keymap('i', '<C-l>', 'v:lua.MUtils.check_backspace()', { expr = true, noremap = true })
+

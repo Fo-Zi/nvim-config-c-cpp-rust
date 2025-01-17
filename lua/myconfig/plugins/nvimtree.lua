@@ -1,5 +1,7 @@
 -- NvimTree configuration
-require('nvim-tree').setup()
+require'nvim-tree'.setup({
+  auto_reload_on_write = true,
+})
 
 -- Optional settings
 vim.g.nvim_tree_width = 30

@@ -14,4 +14,8 @@ require('packer').startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp'
   use 'neovim/nvim-lspconfig'
   use 'folke/trouble.nvim'
+  use 'mfussenegger/nvim-lint'             -- For linting
+  use 'jose-elias-alvarez/null-ls.nvim'    -- Prettier support (null-ls is required for Prettier)
+  use 'tpope/vim-surround'                 -- For surrounding manipulations
+  use 'windwp/nvim-autopairs'              -- For auto-pairing
 end)
