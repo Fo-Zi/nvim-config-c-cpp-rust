@@ -6,8 +6,15 @@ require("mason-lspconfig").setup({
 
 local lspconfig = require('lspconfig')
 lspconfig.clangd.setup({
+
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
+
   on_attach = function(client, bufnr)
-    -- Additional setup for LSP
+      -- Check if the LSP supports code actions
+      if client.server_capabilities.codeActionProvider then
+        print("Code Actions are supported")
+      end
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
   end,
+
 })

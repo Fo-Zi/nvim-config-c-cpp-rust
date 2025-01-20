@@ -1,6 +1,5 @@
 -- Start packer.nvim
-require('packer').startup(function(use)
-  use 'navarasu/onedark.nvim'
+require('packer').startup(function(use) use 'navarasu/onedark.nvim'
   use 'tpope/vim-sensible'
   use 'kyazdani42/nvim-tree.lua'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -18,4 +17,6 @@ require('packer').startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim'    -- Prettier support (null-ls is required for Prettier)
   use 'tpope/vim-surround'                 -- For surrounding manipulations
   use 'windwp/nvim-autopairs'              -- For auto-pairing
+  use { 'nvim-telescope/telescope.nvim',requires = {'nvim-lua/plenary.nvim'} }
+  use {'nvim-telescope/telescope-ui-select.nvim' }
 end)

@@ -1,7 +1,4 @@
 -- NvimTree configuration
--- require'nvim-tree'.setup({
---   auto_reload_on_write = true,
--- })
 
 require('nvim-tree').setup({
   on_attach = function(bufnr)
@@ -20,8 +17,11 @@ require('nvim-tree').setup({
     vim.keymap.set('n', 'R', api.tree.reload, opts('Refresh Tree'))
   end,
 
-  sync_root_with_cwd = true,
-  respect_buf_cwd = true,
+  
+  update_focused_file = {
+    enable = true,  -- Highlight the file in the tree when focused in the editor
+    update_cwd = true,
+  },
   
   view = {
     adaptive_size = true, -- Adjusts the tree size based on the window
@@ -32,6 +32,14 @@ require('nvim-tree').setup({
       resize_window = true, -- Ensures the tree stays consistent across tabs
     },
   },
+  -- Limit the depth of directory watching
+  system_open = {
+    cmd = nil,
+    args = nil
+  },
+  -- This will ensure you're not over-watching deep levels
+  -- sync_root_with_cwd = true,
+  respect_buf_cwd = true,
 
 })
 
@@ -42,4 +50,4 @@ vim.g.nvim_tree_auto_open = 1
 vim.g.nvim_tree_auto_close = 0
 vim.g.nvim_tree_quit_on_open = 0
 
-vim.cmd [[autocmd VimEnter * NvimTreeToggle]]
+-- vim.cmd [[autocmd VimEnter * NvimTreeToggle]]

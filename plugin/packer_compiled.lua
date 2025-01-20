@@ -74,15 +74,110 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lint"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/nvim-lint",
+    url = "https://github.com/mfussenegger/nvim-lint"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-snippy"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/nvim-snippy",
+    url = "https://github.com/dcampos/nvim-snippy"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-sensible"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/vim-sensible",
+    url = "https://github.com/tpope/vim-sensible"
+  },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/vim-snippets",
+    url = "https://github.com/honza/vim-snippets"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 
