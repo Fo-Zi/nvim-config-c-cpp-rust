@@ -1,5 +1,6 @@
 -- Start packer.nvim
-require('packer').startup(function(use) use 'navarasu/onedark.nvim'
+require('packer').startup(function(use) 
+  use 'navarasu/onedark.nvim'
   use 'tpope/vim-sensible'
   use 'kyazdani42/nvim-tree.lua'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -19,4 +20,7 @@ require('packer').startup(function(use) use 'navarasu/onedark.nvim'
   use 'windwp/nvim-autopairs'              -- For auto-pairing
   use { 'nvim-telescope/telescope.nvim',requires = {'nvim-lua/plenary.nvim'} }
   use {'nvim-telescope/telescope-ui-select.nvim' }
+  use {'mg979/vim-visual-multi',branch = 'master'}
+  use 'L3MON4D3/LuaSnip'
+  use {'hrsh7th/cmp-nvim-lsp-signature-help',  requires = { 'hrsh7th/nvim-cmp' }}
 end)

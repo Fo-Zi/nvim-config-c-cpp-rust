@@ -2,9 +2,17 @@
 vim.g.mapleader = " "
 
 ------------------- General keybindings -------------------
--- Ctrl + C && Ctrl + y
-vim.api.nvim_set_keymap('i', '<C-c>', '<Esc>"+y', { noremap = true })
-vim.api.nvim_set_keymap('i', '<C-v>', '<Esc>"+p', { noremap = true })
+----- vim-visual-multi configuration
+vim.g.visual_multi_map_keys = { 
+    -- Define your own keys for actions
+    start_select = '<C-n>',  -- Start selection
+    add_cursor = '<C-n>',    -- Add a cursor to selection
+    remove_cursor = '<C-p>', -- Remove the last cursor
+    select_all = '<C-a>',    -- Select all matches
+}
+
+-- Optional: Customize other visual-multi settings
+vim.g.visual_multi_use_default_mapping = 1  -- Use default mappings
 
 -- Commenting shortcuts:
 -- <Space> + c
@@ -18,7 +26,7 @@ vim.api.nvim_set_keymap('n', '<Leader>fg', ':Telescope live_grep<CR>', { noremap
 -- File explorer shorcuts:
 -- <Space> + e -> Open/Minimize file explorer
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = true })
-
+vim.api.nvim_set_keymap('x', '<C-V>', '<C-V>', { noremap = true, silent = true })
 -- Terminal shortcut
 -- <Space> + t -> Opens terminal in the bottom
 vim.api.nvim_set_keymap('n', '<Leader>t', ':belowright 20 split | terminal<CR>', { noremap = true, silent = true })
@@ -33,3 +41,6 @@ vim.api.nvim_set_keymap('n', 'L', 'gt', { noremap = true, silent = true })
 -- <Space> + ca -> Shows menu to pick code action to apply
 -- <Space> + dd -> Shows diagnostics menu 
 vim.api.nvim_set_keymap('n', '<Leader>dd', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
+
+-- Insert at cursor positions when in visual multi-mode
+vim.api.nvim_set_keymap('x', 'I', '<Plug>(VM-Insert)', { noremap = true, silent = true })

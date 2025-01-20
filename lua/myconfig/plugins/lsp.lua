@@ -18,3 +18,26 @@ lspconfig.clangd.setup({
   end,
 
 })
+
+-- Diagnostic configuration to prevent window shifting
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = "",  -- Icon to show next to the diagnostic message
+    spacing = 4,    -- Space between the icon and message
+  },
+  signs = true,      -- Show diagnostic signs in the gutter
+  underline = true,  -- Underline the text under diagnostics
+  update_in_insert = false, -- Avoid updates while in insert mode (for performance)
+  float = {
+    border = "rounded", -- Make the floating window rounded
+    source = "always",  -- Always show source in floating window
+    header = "",
+    prefix = "",
+  },
+})
+
+-- Define custom signs for diagnostics (these will be shown in the gutter)
+vim.fn.sign_define("LspDiagnosticsSignError", { text = "✘", texthl = "DiagnosticError" })
+vim.fn.sign_define("LspDiagnosticsSignWarning", { text = "▲", texthl = "DiagnosticWarning" })
+vim.fn.sign_define("LspDiagnosticsSignInformation", { text = "ℹ️", texthl = "DiagnosticInformation" })
+vim.fn.sign_define("LspDiagnosticsSignHint", { text = "💡", texthl = "DiagnosticHint" })

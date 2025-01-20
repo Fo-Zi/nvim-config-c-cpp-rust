@@ -1,10 +1,16 @@
-require('lint').linters_by_ft = {
-  -- C and C++ linters
-  c = {'clang'},
-  cpp = {'clang'},
-  
-  -- Rust linter (using rust-analyzer or any other Rust linter)
-  rust = {'rustfmt'}, -- Rustfmt can handle basic linting and formatting
+local lint = require('lint')
+
+-- Configure clang linter
+lint.linters.clang = {
+  cmd = 'clang',  -- You can specify the full path if clang is not in your PATH
+  args = { '-fsyntax-only', '--', '%' },
+}
+
+-- Map filetypes to the linter
+lint.linters_by_ft = {
+  c = { 'clang-tidy' },
+  cpp = { 'clang-tidy' },
+  rust = { 'rustfmt' },  -- For Rust files
 }
 
 -- Enable linting on save
