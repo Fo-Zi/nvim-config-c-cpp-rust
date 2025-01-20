@@ -22,3 +22,15 @@ vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = tru
 -- Terminal shortcut
 -- <Space> + t -> Opens terminal in the bottom
 vim.api.nvim_set_keymap('n', '<Leader>t', ':belowright 20 split | terminal<CR>', { noremap = true, silent = true })
+
+-- Open a new tab and keep nvim-tree layout
+-- vim.api.nvim_set_keymap('n', '<Leader>nt', ':tabnew<CR>:NvimTreeOpen<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<Leader>nt', ':tabnew<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n','<Leader>nt',':tabnew %<CR>:NvimTreeFindFile<CR>',{ noremap = true, silent = true })
+
+-- Tab navigation shortcuts
+-- <Shift> + l  -> Moves onto tab to the left
+-- <Shift> + h  -> Moves onto tab to the right
+vim.api.nvim_set_keymap('n', 'H', 'gT', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'L', 'gt', { noremap = true, silent = true })
+
