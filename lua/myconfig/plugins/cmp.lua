@@ -119,3 +119,5 @@ require('lspconfig').clangd.setup {
   -- Optionally, you can add custom clangd settings via `cmd` or `settings`
   cmd = { "clangd", "--completion-style=detailed", "--clang-tidy", "--suggest-missing-includes" },
 }
+
+require'lspconfig'.rust_analyzer.setup{}

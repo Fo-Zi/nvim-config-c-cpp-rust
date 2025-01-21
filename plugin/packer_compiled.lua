@@ -159,6 +159,16 @@ _G.packer_plugins = {
     path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/rust.vim",
+    url = "https://github.com/rust-lang/rust.vim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",

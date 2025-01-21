@@ -25,4 +25,6 @@ require('packer').startup(function(use)
   use {'hrsh7th/cmp-nvim-lsp-signature-help',  requires = { 'hrsh7th/nvim-cmp' }}
   use {'tzachar/fuzzy.nvim',requires = { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },}
   use {'tzachar/cmp-fuzzy-buffer', requires = { 'hrsh7th/nvim-cmp', 'tzachar/fuzzy.nvim' },}
+  use { 'rust-lang/rust.vim' }
+  use { 'simrat39/rust-tools.nvim' }
 end)
