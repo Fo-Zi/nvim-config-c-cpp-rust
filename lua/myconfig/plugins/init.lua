@@ -23,4 +23,6 @@ require('packer').startup(function(use)
   use {'mg979/vim-visual-multi',branch = 'master'}
   use 'L3MON4D3/LuaSnip'
   use {'hrsh7th/cmp-nvim-lsp-signature-help',  requires = { 'hrsh7th/nvim-cmp' }}
+  use {'tzachar/fuzzy.nvim',requires = { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },}
+  use {'tzachar/cmp-fuzzy-buffer', requires = { 'hrsh7th/nvim-cmp', 'tzachar/fuzzy.nvim' },}
 end)

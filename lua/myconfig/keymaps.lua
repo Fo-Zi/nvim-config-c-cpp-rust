@@ -16,8 +16,9 @@ vim.g.visual_multi_use_default_mapping = 1  -- Use default mappings
 
 -- Commenting shortcuts:
 -- <Space> + c
-vim.api.nvim_set_keymap('n', '<Leader>c', '<Plug>CommentaryLine', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>cc', '<Plug>CommentaryLine', { noremap = true })
 vim.api.nvim_set_keymap('x', '<Leader>c', '<Plug>Commentary', { noremap = true })
+vim.api.nvim_set_keymap('v', '<Leader>c', '<Plug>Commentary', { noremap = true })
 
 -- Find/search files
 vim.api.nvim_set_keymap('n', '<Leader>ff', ':Telescope find_files<CR>', { noremap = true })
@@ -44,3 +45,15 @@ vim.api.nvim_set_keymap('n', '<Leader>dd', ':Telescope diagnostics<CR>', { norem
 
 -- Insert at cursor positions when in visual multi-mode
 vim.api.nvim_set_keymap('x', 'I', '<Plug>(VM-Insert)', { noremap = true, silent = true })
+
+-- Enable Ctrl+Left Arrow and Ctrl+Right Arrow to move to previous/next word
+vim.api.nvim_set_keymap('i', '<C-Left>', '<Esc>bwi', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-Right>', '<Esc>wci', { noremap = true, silent = true })
+
+vim.keymap.set('n', 'gd', function()
+    require('telescope.builtin').lsp_definitions({ jump_type = 'tab' })
+end, { noremap = true, silent = true })
+
+vim.keymap.set('n', 'gD', function()
+    require('telescope.builtin').lsp_declarations({ jump_type = 'tab' })
+end, { noremap = true, silent = true })

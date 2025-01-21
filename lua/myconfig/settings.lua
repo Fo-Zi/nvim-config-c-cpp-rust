@@ -20,3 +20,6 @@ vim.cmd 'filetype plugin indent on'
 -- Colorscheme setup
 require('onedark').setup { style = 'darker' }
 require('onedark').load()
+
+-- Reserve space for the sign column to avoid window shifting
+vim.opt.signcolumn = "yes:1"  -- Always show the sign column, even if there are no signs

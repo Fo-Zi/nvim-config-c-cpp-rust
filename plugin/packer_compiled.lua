@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["cmp-fuzzy-buffer"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/cmp-fuzzy-buffer",
+    url = "https://github.com/tzachar/cmp-fuzzy-buffer"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -88,6 +93,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
+  ["fuzzy.nvim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/fuzzy.nvim",
+    url = "https://github.com/tzachar/fuzzy.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -148,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/fdx-desktop/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope-ui-select.nvim"] = {
     loaded = true,
