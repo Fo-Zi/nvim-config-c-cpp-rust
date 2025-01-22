@@ -106,18 +106,3 @@ cmp.setup {
      ghost_text = true,  -- Show inline suggestions
    },
 }
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-require('lspconfig').clangd.setup {
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    -- Enable signature help and other useful features
-    client.default_capabilities.signature_help = true
-    -- You can also enable other LSP features here like diagnostics, code actions, etc.
-  end,
-  -- Optionally, you can add custom clangd settings via `cmd` or `settings`
-  cmd = { "clangd", "--completion-style=detailed", "--clang-tidy", "--suggest-missing-includes" },
-}
-
-require'lspconfig'.rust_analyzer.setup{}

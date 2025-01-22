@@ -50,6 +50,10 @@ vim.api.nvim_set_keymap('x', 'I', '<Plug>(VM-Insert)', { noremap = true, silent 
 vim.api.nvim_set_keymap('i', '<C-Left>', '<Esc>bwi', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-Right>', '<Esc>wci', { noremap = true, silent = true })
 
+
+vim.api.nvim_set_keymap('n', '<leader>sh', '<cmd>lua vim.lsp.buf.signature_help()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>sd', '<cmd>Telescope lsp_definitions<CR>', { noremap = true, silent = true })
+
 vim.keymap.set('n', 'gd', function()
     require('telescope.builtin').lsp_definitions({ jump_type = 'tab' })
 end, { noremap = true, silent = true })
